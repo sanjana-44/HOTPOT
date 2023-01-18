@@ -1,0 +1,16 @@
+.ing {
+  font-size: 150%;
+}
+
+.box {
+  background-color: #fff9ca;
+  margin: 0px 10px 10px 10px;
+  position: relative;
+  float: left;
+  padding: 3%;
+  cursor: pointer;
+}
+
+.seletedIng {
+  background-color: palegreen;
+}

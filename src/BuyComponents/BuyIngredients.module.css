@@ -1,0 +1,10 @@
+.ing-box {
+  height: 5rem;
+  width: 23%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  padding: 17px;
+}

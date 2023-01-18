@@ -1,0 +1,38 @@
+.outer {
+  position: relative;
+  float: left;
+  margin: 18px;
+  background-color: white;
+  text-align: center;
+  width: 30rem;
+  padding: 15px;
+  box-shadow: 2px 2px 7px 2px rgb(194 192 192);
+}
+
+.head {
+  font-size: 2rem;
+  padding: 12px;
+}
+
+.line {
+  width: 100%;
+  padding: 5px;
+  margin-left: 0;
+  border-top: 1px solid gray;
+}
+
+.extend {
+  width: 100%;
+}
+
+.show {
+  position: fixed;
+  bottom: 55px;
+  right: 35%;
+  border-radius: 30px;
+  padding: 15px;
+  background-color: #fd1313ad;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}

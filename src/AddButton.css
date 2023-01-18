@@ -1,0 +1,12 @@
+.add-but {
+  position: relative;
+  height: 3rem;
+  width: 11rem;
+}
+
+.add-img {
+  position: relative;
+  float: left;
+  height: 2rem;
+  width: 2rem;
+}

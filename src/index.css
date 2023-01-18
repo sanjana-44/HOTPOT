@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --main-color: #8e44ad;
+  --red: #e74c3c;
+  --orange: #f39c12;
+  --light-color: #888;
+  --light-bg: #eee;
+  --black: #2c3e50;
+  --white: #fff;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+*::selection {
+  background-color: lightslategray;
+  color: black;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+  height: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #ffb4b4;
+}
+
+body {
+  background-color: #ffdeb4;
+  padding-left: 30rem;
+}
+
+body.dark {
+  --light-color: #aaa;
+  --light-bg: #333;
+  --black: #fff;
+  --white: #222;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+
+body.active {
+  padding-left: 0;
+}
+
+section {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: var(--black);
+  margin-bottom: 2.5rem;
+  border-bottom: var(--border);
+  padding-bottom: 1.5rem;
+  text-transform: capitalize;
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn,
+.btn,
+.delete-btn,
+.option-btn {
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.btn,
+.delete-btn,
+.option-btn {
+  display: block;
+  width: 100%;
+}
+
+.inline-btn,
+.inline-option-btn,
+.inline-delete-btn {
+  display: inline-block;
+}
+
+.btn,
+.inline-btn {
+  background-color: var(--main-color);
+}
+
+.option-btn,
+.inline-option-btn {
+  background-color: var(--orange);
+}
+
+.delete-btn,
+.inline-delete-btn {
+  background-color: var(--red);
+}
+
+.inline-btn:hover,
+.inline-option-btn:hover,
+.inline-delete-btn:hover,
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.flex-btn {
+  display: flex;
+  gap: 1rem;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--white);
+  z-index: 1000;
+  border-bottom: var(--border);
+}
+
+.header .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem 2rem;
+  background-color: #b2a4ff;
+}
+
+.icon-img {
+  height: 5rem;
+}
+
+.header .flex .search-form {
+  width: 50rem;
+  border-radius: 0.5rem;
+  background-color: var(--light-bg);
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.header .flex .search-form input {
+  width: 100%;
+  font-size: 1.8rem;
+  color: var(--black);
+  background: none;
+}
+
+.header .flex .search-form button {
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.header .flex .search-form button:hover {
+  color: var(--main-color);
+}
+
+.header .flex .icons div {
+  font-size: 270%;
+  color: var(--white);
+
+  border-radius: 0.5rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 0.7rem;
+}
+
+.header .flex .icons div:hover {
+  background-color: lightslategray;
+  color: var(--white);
+}
+
+.header .flex .profile {
+  position: absolute;
+  top: 120%;
+  right: 2rem;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  overflow: hidden;
+  transform-origin: top right;
+  transform: scale(0);
+  transition: 0.2s linear;
+  width: 30rem;
+}
+
+.header .flex .profile.active {
+  transform: scale(1);
+}
+
+.header .flex .profile .image {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.header .flex .profile .name {
+  font-size: 2rem;
+  color: var(--black);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.header .flex .profile .role {
+  font-size: 1.8rem;
+  color: var(--light-color);
+}
+
+#search-btn {
+  display: none;
+}
+
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  background-color: var(--white);
+  height: 100vh;
+  border-right: var(--border);
+  z-index: 1200;
+}
+
+.side-bar #close-btn {
+  text-align: right;
+  padding: 2rem;
+  display: none;
+}
+
+.side-bar #close-btn i {
+  text-align: right;
+  font-size: 2.5rem;
+  background: var(--red);
+  border-radius: 0.5rem;
+  color: var(--white);
+  cursor: pointer;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  text-align: center;
+}
+
+.side-bar #close-btn i:hover {
+  background-color: var(--black);
+}
+
+.side-bar .profile {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.side-bar .profile .image {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.side-bar .profile .name {
+  font-size: 2rem;
+  color: var(--black);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.side-bar .profile .role {
+  font-size: 1.8rem;
+  color: var(--light-color);
+}
+
+.side-bar .navbar a {
+  display: block;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.side-bar {
+  background-color: #ffb4b4;
+}
+
+.side-bar .navbar a div {
+  margin-right: 1.5rem;
+  color: var(--white);
+}
+
+.side-bar .navbar a span {
+  color: black;
+}
+
+.side-bar .navbar a:hover {
+  background-color: #fff9ca;
+}
+
+.side-bar .navbar a:hover div {
+  margin-right: 2.5rem;
+  color: black;
+}
+
+.side-bar.active {
+  left: -30rem;
+}
+
+.bottom-icon {
+  position: fixed;
+  bottom: 45px;
+  right: 10px;
+  width: 10%;
+}
+
+.bot-img-1 {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: 10px;
+  margin-right: 18px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7%;
+  text-align: end;
+  font-size: 20px;
+  background-color: #b2a4ff;
+  color: white;
+  text-align: center;
+}
+
+.footer span {
+  position: fixed;
+  right: 170px;
+}
