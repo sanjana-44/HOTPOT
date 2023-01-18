@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <!-- <link rel="stylesheet" href="../src/index.css" /> -->
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+  </head>
+  <body>
+    <header class="header">
+      <section class="flex">
+        <a href="home.html" class="logo"
+          ><img src="images/dish.png" class="icon-img"
+        /></a>
+
+        <form action="search.html" method="post" class="search-form">
+          <input
+            type="text"
+            name="search_box"
+            required
+            placeholder="search ..."
+            maxlength="100"
+          />
+          <button type="submit" class="fas fa-search"></button>
+        </form>
+
+        <div class="icons">
+          <div id="menu-btn" class="fas fa-microphone"></div>
+          <div id="search-btn" class="fas fa-search"></div>
+          <div id="user-btn" class="fas fa-user"></div>
+          <div id="toggle-btn" class="fas fa-cart-shopping"></div>
+        </div>
+      </section>
+    </header>
+
+    <div class="side-bar">
+      <div id="close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+
+      <nav class="navbar">
+        <a href="home.html" class="favourite"
+          ><div class="fa-regular fa-heart"></div>
+          <span>Favourite</span></a
+        >
+        <a href="about.html" class="select"
+          ><div class="fa-regular fa-circle-check"></div>
+          <span>Select the Ingredients</span></a
+        >
+
+        <a href="courses.html" class="ingredients"
+          ><div class="fa-solid fa-cart-shopping"></div>
+          <span>Buy Ingredients</span></a
+        >
+
+        <a href="teachers.html" class="suggestion"
+          ><div class="fa-regular fa-lightbulb"></div>
+          <span>Find Suggestion</span></a
+        >
+        <a href="contact.html" class="language"
+          ><div class="fa-solid fa-language"></div>
+          <span>Language</span></a
+        >
+        <a href="contact.html" class="logout"
+          ><div class="fa-solid fa-gear"></div>
+          <span>Logout</span></a
+        >
+      </nav>
+</script>
+
+    </div>
+
+    <section class="home-grid">
+      <div id="root"></div>
+
+      <div class="bottom-icon">
+        <a href="some.html"><img class="bot-img-1" src="images/add.png" /></a>
+        <a href="contact.html"
+          ><img class="bot-img-1" src="images/planet-earth.png"
+        /></a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span
+        >&copy; copyright @ 2022 by mr. web designer | all rights
+        reserved!</span
+      >
+    </footer>
+
+    <!-- custom js file link  -->
+  </body>
+</html>
